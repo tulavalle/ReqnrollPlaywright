@@ -1,0 +1,5 @@
+*.feature.cs
+/.vs
+/.vscode
+/bin/Debug/net8.0
+/obj
