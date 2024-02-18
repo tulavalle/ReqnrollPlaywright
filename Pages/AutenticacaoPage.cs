@@ -2,15 +2,15 @@
 {
     public class AutenticacaoPage
     {
-        private readonly IPage _user;
-
+        private readonly IPage _currentPage;
         public AutenticacaoPage(Hooks hooks)
         {
-            _user = hooks.User;
+            _currentPage = hooks.CurrentPage;
         }
-        private ILocator Username => _user.Locator("[data-test='username']");
-        private ILocator Password => _user.Locator("[data-test='password']");
-        private ILocator LoginButton => _user.Locator("[data-test='login-button']");
+
+        private ILocator Username => _currentPage.Locator("[data-test='username']");
+        private ILocator Password => _currentPage.Locator("[data-test='password']");
+        private ILocator LoginButton => _currentPage.Locator("[data-test='login-button']");
 
         public async Task SetValuesAutenticationAndClickLoginButton(string username, string password)
         {

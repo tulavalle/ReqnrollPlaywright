@@ -2,14 +2,14 @@
 {
     public class ProductsPage
     {
-        private readonly IPage _user;
+        private readonly IPage _currentPage;
 
         public ProductsPage(Hooks hooks)
         {
-            _user = hooks.User;
+            _currentPage = hooks.CurrentPage;
         }
 
-        public ILocator AppLogo => _user.Locator("div[class='app_logo']");
+        public ILocator AppLogo => _currentPage.Locator("div[class='app_logo']");
 
         public string GetTextPage()
         {

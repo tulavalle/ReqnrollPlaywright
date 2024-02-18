@@ -1,5 +1,3 @@
-using Reqnroll;
-
 namespace ReqnrollPlaywright.StepDefinitions;
 
 public sealed class CalculatorStepDefinitions

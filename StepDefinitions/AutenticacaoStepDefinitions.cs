@@ -4,13 +4,12 @@
     public class AutenticacaoStepDefinitions
     {
         private readonly ScenarioContext _scenarioContext;
-        private readonly IPage _user;
+        private readonly IPage _currentPage;
         private Hooks _hooks;
-
         public AutenticacaoStepDefinitions(ScenarioContext scenarioContext, Hooks hooks)
         {
             _hooks = hooks;
-            _user = hooks.User;
+            _currentPage = hooks.CurrentPage;
             _scenarioContext = scenarioContext;
         }
 
@@ -23,7 +22,7 @@
         [Given("que o usuário acessa o sistema {string}")]
         public async Task GivenQueOUsuarioAcessaOSistema(string url)
         {
-            await _user.GotoAsync(url);
+            await _currentPage.GotoAsync(url);
         }
 
         [When("solicita para realizar o login informando seus dados de autenticação")]
@@ -36,11 +35,6 @@
         [Then("acessa o sistema {string}")]
         public void ThenAcessaOSistema(string system)
         {
-            // var val = ProductsPage.AppLogo.TextContentAsync().Result;
-
-
-            //val.Should().Be(system);
-
             var systemFound = ProductsPage.GetTextPage();
             systemFound.Should().Be(system);
         }
