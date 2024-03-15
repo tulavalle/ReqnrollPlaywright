@@ -1,9 +1,9 @@
 ﻿namespace ReqnrollPlaywright.Pages
 {
-    public class AutenticacaoPage
+    public class AuthenticationPage
     {
         private readonly IPage _currentPage;
-        public AutenticacaoPage(Hooks hooks)
+        public AuthenticationPage(Hooks hooks)
         {
             _currentPage = hooks.CurrentPage;
         }

@@ -1,20 +1,20 @@
 ﻿namespace ReqnrollPlaywright.StepDefinitions
 {
     [Binding]
-    public class AutenticacaoStepDefinitions
+    public class AuthenticationStepDefinitions
     {
         private readonly ScenarioContext _scenarioContext;
         private readonly IPage _currentPage;
         private Hooks _hooks;
-        public AutenticacaoStepDefinitions(ScenarioContext scenarioContext, Hooks hooks)
+        public AuthenticationStepDefinitions(ScenarioContext scenarioContext, Hooks hooks)
         {
             _hooks = hooks;
             _currentPage = hooks.CurrentPage;
             _scenarioContext = scenarioContext;
         }
 
-        private AutenticacaoPage autenticacaoPage;
-        private AutenticacaoPage AutenticacaoPage => autenticacaoPage ??= new AutenticacaoPage(_hooks);
+        private AuthenticationPage authenticationPage;
+        private AuthenticationPage AuthenticationPage => authenticationPage ??= new AuthenticationPage(_hooks);
 
         private ProductsPage productsPage;
         private ProductsPage ProductsPage => productsPage ??= new ProductsPage(_hooks);
@@ -26,10 +26,10 @@
         }
 
         [When("solicita para realizar o login informando seus dados de autenticação")]
-        public async Task WhenSolicitaParaRealizarOLoginInformandoSeusDadosDeAutenticacao(DataTable dataTable)
+        public async Task WhenSolicitaParaRealizarOLoginInformandoSeusDadosDeAuthentication(DataTable dataTable)
         {
             var (username, password) = dataTable.CreateInstance<(string username, string password)>();
-            await AutenticacaoPage.SetValuesAutenticationAndClickLoginButton(username, password);
+            await AuthenticationPage.SetValuesAutenticationAndClickLoginButton(username, password);
         }
 
         [Then("acessa o sistema {string}")]
