@@ -1,10 +1,10 @@
 ﻿namespace ReqnrollPlaywright.Pages
 {
-    public class ProductsPage
+    public class ProdutosPage
     {
         private readonly IPage _currentPage;
 
-        public ProductsPage(Hooks hooks)
+        public ProdutosPage(Hooks hooks)
         {
             _currentPage = hooks.CurrentPage;
         }
