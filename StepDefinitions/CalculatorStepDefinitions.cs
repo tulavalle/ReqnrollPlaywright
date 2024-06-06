@@ -5,7 +5,6 @@ public class CalculatorStepDefinitions
 {
     // For additional details on Reqnroll step definitions see https://go.reqnroll.net/doc-stepdef
 
-
     [Given("the first number is {int}")]
     public void GivenTheFirstNumberIs(int number)
     {
@@ -15,7 +14,7 @@ public class CalculatorStepDefinitions
         // additional string/DataTable parameters can be defined on the step definition
         // method. 
 
-        throw new PendingStepException();
+        false.Should().BeTrue();
     }
 
     [Given("the second number is {int}")]
@@ -23,7 +22,7 @@ public class CalculatorStepDefinitions
     {
         //TODO: implement arrange (precondition) logic
 
-        throw new PendingStepException();
+        false.Should().BeTrue();
     }
 
     [When("the two numbers are added")]
@@ -31,7 +30,7 @@ public class CalculatorStepDefinitions
     {
         //TODO: implement act (action) logic
 
-        throw new PendingStepException();
+        false.Should().BeTrue();
     }
 
     [Then("the result should be {int}")]
