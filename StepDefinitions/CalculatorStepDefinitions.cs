@@ -1,8 +1,10 @@
 namespace ReqnrollPlaywright.StepDefinitions;
 
-public sealed class CalculatorStepDefinitions
+[Binding]
+public class CalculatorStepDefinitions
 {
     // For additional details on Reqnroll step definitions see https://go.reqnroll.net/doc-stepdef
+
 
     [Given("the first number is {int}")]
     public void GivenTheFirstNumberIs(int number)
@@ -17,7 +19,7 @@ public sealed class CalculatorStepDefinitions
     }
 
     [Given("the second number is {int}")]
-    public void GivenTheSecondNumberIs(int number)
+    public async Task GivenTheSecondNumberIs(int number)
     {
         //TODO: implement arrange (precondition) logic
 
@@ -25,7 +27,7 @@ public sealed class CalculatorStepDefinitions
     }
 
     [When("the two numbers are added")]
-    public void WhenTheTwoNumbersAreAdded()
+    public async Task WhenTheTwoNumbersAreAdded()
     {
         //TODO: implement act (action) logic
 
@@ -33,7 +35,7 @@ public sealed class CalculatorStepDefinitions
     }
 
     [Then("the result should be {int}")]
-    public void ThenTheResultShouldBe(int result)
+    public async Task ThenTheResultShouldBe(int result)
     {
         //TODO: implement assert (verification) logic
 

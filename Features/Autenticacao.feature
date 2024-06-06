@@ -1,7 +1,7 @@
 ﻿# language: pt
 
 Funcionalidade: Autenticação
-	Sendo um usuãrio cadastrado
+	Sendo um usuário cadastrado
 	Pode informar seus dados de autenticação
 	Para acessar o sistema
 
