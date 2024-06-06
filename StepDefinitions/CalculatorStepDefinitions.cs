@@ -19,7 +19,7 @@ public class CalculatorStepDefinitions
     }
 
     [Given("the second number is {int}")]
-    public async Task GivenTheSecondNumberIs(int number)
+    public void GivenTheSecondNumberIs(int number)
     {
         //TODO: implement arrange (precondition) logic
 
@@ -27,7 +27,7 @@ public class CalculatorStepDefinitions
     }
 
     [When("the two numbers are added")]
-    public async Task WhenTheTwoNumbersAreAdded()
+    public void WhenTheTwoNumbersAreAdded()
     {
         //TODO: implement act (action) logic
 
@@ -35,7 +35,7 @@ public class CalculatorStepDefinitions
     }
 
     [Then("the result should be {int}")]
-    public async Task ThenTheResultShouldBe(int result)
+    public void ThenTheResultShouldBe(int result)
     {
         //TODO: implement assert (verification) logic
 
