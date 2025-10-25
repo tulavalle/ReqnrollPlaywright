@@ -14,7 +14,7 @@ public class CalculatorStepDefinitions
         // additional string/DataTable parameters can be defined on the step definition
         // method. 
 
-        false.Should().BeTrue();
+        Assert.That(false, Is.True);
     }
 
     [Given("the second number is {int}")]
@@ -22,7 +22,7 @@ public class CalculatorStepDefinitions
     {
         //TODO: implement arrange (precondition) logic
 
-        false.Should().BeTrue();
+        Assert.That(false, Is.True);
     }
 
     [When("the two numbers are added")]
@@ -30,7 +30,7 @@ public class CalculatorStepDefinitions
     {
         //TODO: implement act (action) logic
 
-        false.Should().BeTrue();
+        Assert.That(false, Is.True);
     }
 
     [Then("the result should be {int}")]

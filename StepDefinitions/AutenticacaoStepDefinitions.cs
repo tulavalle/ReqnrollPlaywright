@@ -1,4 +1,6 @@
-﻿namespace ReqnrollPlaywright.StepDefinitions;
+﻿using NUnit.Framework;
+
+namespace ReqnrollPlaywright.StepDefinitions;
 
 [Binding]
 
@@ -37,6 +39,6 @@ public class AutenticacaoStepDefinitions
     public void ThenAcessaOSistema(string system)
     {
         var systemFound = ProductsProdutos.GetTextPage();
-        systemFound.Should().Be(system);
+        Assert.That(systemFound, Is.EqualTo(system));
     }
 }
