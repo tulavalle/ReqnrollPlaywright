@@ -5,6 +5,11 @@
    "feature": "pt-BR"
  },
   "formatters": {
-        "html" : { "outputFilePath" : "reqnroll_report.html" }
+      "html" : { "outputFilePath" : "reqnroll_report.html"
+    },
+      "expressium": {
+        "outputFilePath": "Expressium.ReqnrollPlaywright.Tests.ndjson",
+        "outputFileTitle": "Expressium.ReqnrollPlaywright.Tests"
     }
+  }
 }

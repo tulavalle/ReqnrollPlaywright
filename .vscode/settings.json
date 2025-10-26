@@ -1,12 +1,11 @@
 {
-    "files.associations": {
-        "*.feature": "gherkin"
-    },
     "cucumber.glue": [
-        "ReqnrollPlaywright/StepDefinitions/**/*.cs"
+        "ReqnrollPlaywright/StepDefinitions/**/*.cs",
+        "ReqnrollPlaywright/StepDefinitions/*.cs"
     ],
     "cucumber.features": [
-        "ReqnrollPlaywright/Features/**/*.feature"
+        "ReqnrollPlaywright/Features/**/*.feature",
+        "ReqnrollPlaywright/Features/*.feature"
     ],
     "explorer.compactFolders": false
 }
